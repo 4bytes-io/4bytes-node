@@ -9,4 +9,9 @@ describe('fourBytes Class', () => {
             expect(response.status).toBe(200);
         });
     });
+    it("should return 'claim()'", () => {
+        fourBytesObj.getBySignature('0x4e71d92d').then((response) => {
+            expect(response.data.signature).toBe('claim()');
+        });
+    }
 })
